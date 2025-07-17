@@ -347,7 +347,7 @@ export default {
         },
         {
           title: 'CATALYST',
-          image: 'https://scontent.fpnh19-1.fna.fbcdn.net/v/t39.30808-6/486021460_651365147830151_8884197849751306824_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=75d36f&_nc_ohc=UlLeOYiLjkkQ7kNvwF2U974&_nc_oc=Adl7IRlBBzu7B1Mg7ItT0QlGY-QiHOx83cLFI9yGE3fyQfcwHcvice71U6t0sM8Ff2w&_nc_zt=23&_nc_ht=scontent.fpnh19-1.fna&_nc_gid=UJ3MOSogSfCDfJlQVmiuHg&oh=00_AfTAzuTDriCDXUCXd6JdEd3JtNeY-YdMnz0kArhTmvthZg&oe=686FDD96',
+          image: 'https://buddhistglobalrelief.org/wp-content/uploads/2023/07/Lotus-CATALYST.jpg',
           icon: 'fas fa-user-graduate',
           description: 'Providing university scholarships, mentoring, and leadership training for at-risk female youth in Cambodia.',
           fullDescription: 'CATALYST is our flagship leadership development program that transforms promising young women into confident leaders and change-makers in their communities. Through comprehensive university scholarships, intensive mentoring, and specialized leadership training, CATALYST participants develop the skills, knowledge, and networks needed to break cycles of poverty and become advocates for positive change in Cambodia.',
