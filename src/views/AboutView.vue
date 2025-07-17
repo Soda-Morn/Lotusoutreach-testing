@@ -1,6 +1,6 @@
+
 <template>
   <div class="min-h-screen bg-white">
-    <!-- Hero Section with Slideshow -->
     <section class="relative bg-gradient-to-br from-blue-100 via-purple-100 to-indigo-700">
       <div class="relative w-full h-[600px] overflow-hidden">
         <div class="absolute inset-0 z-0">
@@ -23,7 +23,6 @@
           </div>
         </div>
 
-        <!-- Pagination Dots -->
         <div class="absolute bottom-4 left-0 right-0 flex justify-center z-20">
           <button
             v-for="(image, index) in images"
@@ -38,7 +37,6 @@
         </div>
       </div>
 
-      <!-- Centered Hero Card -->
       <div class="absolute inset-0 flex items-center justify-center px-4 z-20">
         <div class="p-10 max-w-2xl text-center">
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 mb-6">See Our About</h1>
@@ -56,10 +54,8 @@
       </div>
     </section>
 
-    <!-- Section: Lotus Outreach Intro -->
     <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
-        <!-- Image & Badge -->
         <div class="relative mr-0 md:mr-8 mb-12 md:mb-0">
           <div class="w-[400px] h-[400px] rounded-full border-[12px] border-blue-500 overflow-hidden mx-auto">
             <img
@@ -82,7 +78,6 @@
           </div>
         </div>
 
-        <!-- Text -->
         <div class="flex-1 text-center md:text-left">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">History</h1>
           <h2 class="text-2xl font-semibold text-gray-600 mb-6">| Donate For Girls Around The World!</h2>
@@ -104,14 +99,11 @@
       </div>
     </section>
 
-    <!-- Section: Our Mission, Vision, Values -->
     <section class="py-20" id="mission-vision-values">
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        <!-- Left: Mission, Vision, Values -->
         <div>
           <h2 class="text-4xl font-bold text-blue-700 mb-8">Our Mission, Vision & Values</h2>
 
-          <!-- Mission -->
           <div class="mb-6">
             <div class="flex items-center mb-2">
               <Target class="text-blue-600 w-7 h-7 mr-2" />
@@ -123,7 +115,6 @@
             </p>
           </div>
 
-          <!-- Vision -->
           <div class="mb-6">
             <div class="flex items-center mb-2">
               <Eye class="text-blue-600 w-7 h-7 mr-2" />
@@ -135,7 +126,6 @@
             </p>
           </div>
 
-          <!-- Values -->
           <div>
             <div class="flex items-center mb-2">
               <Gem class="text-blue-600 w-7 h-7 mr-2" />
@@ -148,7 +138,6 @@
           </div>
         </div>
 
-        <!-- Right: Image -->
         <div>
           <img
             src="https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9585-2.jpg"
@@ -159,7 +148,6 @@
       </div>
     </section>
 
-    <!-- Section: Our Inspired Team -->
     <section id="team">
       <div class="container mx-auto px-4 py-12">
         <h2
@@ -192,26 +180,24 @@
       </div>
     </section>
 
-    <!-- Section: Partners Slider -->
     <section class="bg-white py-16" id="partners">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <!-- Section Title -->
         <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-10 flex items-center">
           Our Value Partners
         </h2>
 
-        <div class="relative">
-          <!-- Logo Slider -->
+        <div class="relative overflow-hidden">
           <div
-            ref="slider"
-            class="flex overflow-x-auto space-x-6 scroll-smooth scrollbar-hide pb-4"
-            @mouseenter="pauseAutoScroll"
-            @mouseleave="resumeAutoScroll"
+            class="flex whitespace-nowrap animate-marquee"
+            :style="{ '--marquee-width': marqueeWidth, '--marquee-duration': marqueeDuration + 's' }"
+            @mouseenter="pauseMarquee"
+            @mouseleave="resumeMarquee"
           >
             <div
               v-for="(partner, index) in partnerLogos"
               :key="index"
-              class="min-w-[160px] h-32 flex flex-col items-center justify-center bg-gray-50 rounded-xl shadow hover:shadow-md transition duration-300 cursor-pointer"
+              class="inline-flex flex-col items-center justify-center bg-gray-50 rounded-xl shadow hover:shadow-md transition duration-300 cursor-pointer mr-6 flex-shrink-0"
+              style="min-width: 160px; height: 128px;"
             >
               <a
                 :href="partner.url"
@@ -229,22 +215,6 @@
               <p class="mt-2 text-center text-sm text-gray-600">{{ partner.info }}</p>
             </div>
           </div>
-
-          <!-- Navigation Arrows -->
-          <button
-            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition z-10"
-            @click="scrollLeft"
-            aria-label="Scroll logos left"
-          >
-            <ChevronLeft class="w-5 h-5 text-gray-700" />
-          </button>
-          <button
-            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition z-10"
-            @click="scrollRight"
-            aria-label="Scroll logos right"
-          >
-            <ChevronRight class="w-5 h-5 text-gray-700" />
-          </button>
         </div>
       </div>
     </section>
@@ -252,7 +222,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Target, Eye, Gem, ChevronLeft, ChevronRight } from 'lucide-vue-next';
@@ -322,14 +292,14 @@ const teamMembers = ref<TeamMember[]>([
   },
 ]);
 
-const partnerLogos = ref<Partner[]>([
+const originalPartnerLogos = [
   {
-    img: 'https://media.licdn.com/dms/image/v2/C4D0BAQHLK2qt2V_7WQ/company-logo_200_200/company-logo_200_200/0/1631351034062?e=2147483647&v=beta&t=Uzxqw27c1hoNE3J0zKF90uwk69dJKAv7EHPUvl1DDBI', // Truncated for brevity
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_2n4ixhk90E0WEDNpghs_skGLtJZuMNCGfqyiBtnwoKRjd8DRZxCgLlmGYCwm9fuGAg&usqp=CAU',
     url: 'https://www.passerellesnumeriques.org/what-we-do/cambodia/',
     info: 'Passerelles Numériques',
   },
   {
-    img: 'http://cwcc.org.kh/wp-content/uploads/2024/07/cropped-logo-4.png', // Truncated for brevity
+    img: 'http://cwcc.org.kh/wp-content/uploads/2024/07/cropped-logo-4.png',
     url: 'http://cwcc.org.kh/',
     info: 'CWCC',
   },
@@ -373,73 +343,70 @@ const partnerLogos = ref<Partner[]>([
     url: 'https://mulheresdaparada.org/',
     info: 'Mulheres da Parada',
   },
-]);
+];
 
-const slider = ref<HTMLElement | null>(null);
-let autoScrollInterval: ReturnType<typeof setInterval> | null = null;
-const scrollStep = 4; // Increased for smoother scrolling
-const intervalMs = 30; // Slightly slower for better performance
+// Duplicate the logos multiple times to ensure a continuous loop for CSS animation
+// We'll duplicate it 4 times to ensure seamless scrolling even on wider screens
+const partnerLogos = ref<Partner[]>([...originalPartnerLogos, ...originalPartnerLogos, ...originalPartnerLogos, ...originalPartnerLogos]);
 
-function autoScroll() {
-  if (!slider.value) return;
-  slider.value.scrollLeft += scrollStep;
-  if (slider.value.scrollLeft >= slider.value.scrollWidth - slider.value.clientWidth) {
-    slider.value.scrollLeft = 0;
+const marqueeWidth = ref('0px');
+const marqueeDuration = ref(30); // Adjust this value (in seconds) for desired speed. Lower = faster.
+
+const calculateMarqueeWidth = () => {
+  if (originalPartnerLogos.length === 0) {
+    marqueeWidth.value = '0px';
+    return;
   }
-}
+  // Assuming each logo item is 160px wide (min-width) + 24px (mr-6)
+  const singleLogoItemWidth = 160 + 24;
+  marqueeWidth.value = `${originalPartnerLogos.length * singleLogoItemWidth}px`;
 
-const startAutoScroll = () => {
-  if (autoScrollInterval) return;
-  autoScrollInterval = setInterval(autoScroll, intervalMs);
+  // You can dynamically adjust duration based on number of logos
+  // For example, 2 seconds per logo for a consistent 'speed' feeling
+  // marqueeDuration.value = originalPartnerLogos.length * 2;
 };
 
-const stopAutoScroll = () => {
-  if (autoScrollInterval) {
-    clearInterval(autoScrollInterval);
-    autoScrollInterval = null;
+// Controls for pausing/resuming CSS animation on hover
+const pauseMarquee = (event: Event) => {
+  if (event.currentTarget instanceof HTMLElement) {
+    event.currentTarget.style.animationPlayState = 'paused';
   }
 };
 
-const pauseAutoScroll = () => {
-  stopAutoScroll();
-};
-
-const resumeAutoScroll = () => {
-  startAutoScroll();
-};
-
-const scrollLeft = () => {
-  if (!slider.value) return;
-  const newScrollPos = Math.max(slider.value.scrollLeft - 300, 0);
-  slider.value.scrollTo({ left: newScrollPos, behavior: 'smooth' });
-};
-
-const scrollRight = () => {
-  if (!slider.value) return;
-  const maxScroll = slider.value.scrollWidth - slider.value.clientWidth;
-  let newScrollPos = slider.value.scrollLeft + 300;
-  if (newScrollPos > maxScroll) {
-    newScrollPos = 0;
+const resumeMarquee = (event: Event) => {
+  if (event.currentTarget instanceof HTMLElement) {
+    event.currentTarget.style.animationPlayState = 'running';
   }
-  slider.value.scrollTo({ left: newScrollPos, behavior: 'smooth' });
 };
 
 onMounted(() => {
-  startAutoScroll();
+  // Ensure DOM is ready before calculating width for the marquee
+  nextTick(() => {
+    calculateMarqueeWidth();
+  });
+  interval = setInterval(nextSlide, 5000);
+  AOS.init({ duration: 1000, once: true });
 });
 
 onBeforeUnmount(() => {
-  stopAutoScroll();
+  if (interval) clearInterval(interval);
 });
 </script>
 
+
 <style>
-/* Hide native scrollbar for partner logos slider */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+/* Define the keyframes for the marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-width)));
+  }
 }
-.scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+
+/* Apply the animation to the container */
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
 }
 </style>

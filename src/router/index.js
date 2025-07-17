@@ -6,6 +6,7 @@ import CambodiaView from '@/views/CambodiaView.vue'
 import NewsView from '@/views/ActivityView.vue'
 import DonateView from '@/views/DonateView.vue'
 import ContactView from '@/views/ContactView.vue'
+import Education from '@/components/Education.vue'
 
 
 
@@ -42,6 +43,11 @@ const router = createRouter({
       name: 'contact',
       component: ContactView,
     },
+    {
+      path: '/education/:id',
+      name: 'education',
+      component: Education,
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
     // Scroll to the top of the page on route change
