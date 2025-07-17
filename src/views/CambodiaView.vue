@@ -1,4 +1,3 @@
-```vue
 <template>
   <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white font-sans">
     <!-- Main Page -->
@@ -599,4 +598,3 @@ button:hover {
   transform: scale(1.05);
 }
 </style>
-```

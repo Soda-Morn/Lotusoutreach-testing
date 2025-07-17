@@ -3,9 +3,6 @@
     <Navbar />
     <RouterView />
     <Footer/>
-    
-
-  
   </div> 
 
 </template>
