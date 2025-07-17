@@ -10,6 +10,7 @@
         <h1 class="text-2xl font-bold text-pink-600 tracking-wide">Lotus Outreach</h1>
       </div>
 
+      <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 text-gray-800 font-medium">
         <li>
           <RouterLink to="/" :class="{ 'text-pink-600': isActive('/') }" class="hover:text-pink-600 transition-colors">
@@ -36,17 +37,15 @@
             Donate
           </RouterLink>
         </li>
-       
         <li>
           <RouterLink to="/contact" :class="{ 'text-pink-600': isActive('/contact') }" class="hover:text-pink-600 transition-colors">
             Contact
           </RouterLink>
         </li>
-       
         <li>
           <RouterLink
             to="/login"
-            :class="{ 'text-pink-600': isActive('/login') }"
+            :class="{ 'text-pink-600 bg-pink-100': isActive('/login') }"
             class="px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 font-semibold shadow transition"
           >
             Login
@@ -56,7 +55,7 @@
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden">
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-700 hover:text-pink-600 focus:outline-none">
+        <button @click="toggleMobileMenu" class="text-gray-700 hover:text-pink-600 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               v-if="!mobileMenuOpen"
@@ -76,7 +75,86 @@
         </button>
       </div>
     </div>
-    <!-- Mobile menu can be added here if needed -->
+
+    <!-- Mobile Menu -->
+    <div
+      v-if="mobileMenuOpen"
+      class="md:hidden bg-white border-t border-gray-100 absolute w-full top-20 left-0 shadow-lg"
+      :class="{ 'animate-slide-in': mobileMenuOpen, 'animate-slide-out': !mobileMenuOpen }"
+    >
+      <ul class="flex flex-col items-center py-4 space-y-4 text-gray-800 font-medium">
+        <li>
+          <RouterLink
+            to="/"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600': isActive('/') }"
+            class="hover:text-pink-600 transition-colors block py-2"
+          >
+            Why Girl?
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/about"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600': isActive('/about') }"
+            class="hover:text-pink-600 transition-colors block py-2"
+          >
+            About Us
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/cambodia"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600': isActive('/cambodia') }"
+            class="hover:text-pink-600 transition-colors block py-2"
+          >
+            Program
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/news"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600': isActive('/news') }"
+            class="hover:text-pink-600 transition-colors block py-2"
+          >
+            News
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/donate"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600': isActive('/donate') }"
+            class="hover:text-pink-600 transition-colors block py-2"
+          >
+            Donate
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/contact"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600': isActive('/contact') }"
+            class="hover:text-pink-600 transition-colors block py-2"
+          >
+            Contact
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/login"
+            @click="toggleMobileMenu"
+            :class="{ 'text-pink-600 bg-pink-100': isActive('/login') }"
+            class="px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 font-semibold shadow transition"
+          >
+            Login
+          </RouterLink>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>
 
@@ -90,4 +168,41 @@ const route = useRoute()
 const isActive = (path) => {
   return route.path === path
 }
+
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
 </script>
+
+<style scoped>
+/* Slide-in animation for mobile menu */
+.animate-slide-in {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.animate-slide-out {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+</style>
