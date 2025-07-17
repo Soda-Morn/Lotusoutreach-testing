@@ -28,8 +28,8 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/news" :class="{ 'text-pink-600': isActive('/news') }" class="hover:text-pink-600 transition-colors">
-            News
+          <RouterLink to="/activity" :class="{ 'text-pink-600': isActive('/activity') }" class="hover:text-pink-600 transition-colors">
+            Activity
           </RouterLink>
         </li>
         <li>
@@ -40,15 +40,6 @@
         <li>
           <RouterLink to="/contact" :class="{ 'text-pink-600': isActive('/contact') }" class="hover:text-pink-600 transition-colors">
             Contact
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink
-            to="/login"
-            :class="{ 'text-pink-600 bg-pink-100': isActive('/login') }"
-            class="px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 font-semibold shadow transition"
-          >
-            Login
           </RouterLink>
         </li>
       </ul>
@@ -115,12 +106,12 @@
         </li>
         <li>
           <RouterLink
-            to="/news"
+            to="/activity"
             @click="toggleMobileMenu"
-            :class="{ 'text-pink-600': isActive('/news') }"
+            :class="{ 'text-pink-600': isActive('/activity') }"
             class="hover:text-pink-600 transition-colors block py-2"
           >
-            News
+            Activity
           </RouterLink>
         </li>
         <li>
@@ -141,16 +132,6 @@
             class="hover:text-pink-600 transition-colors block py-2"
           >
             Contact
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink
-            to="/login"
-            @click="toggleMobileMenu"
-            :class="{ 'text-pink-600 bg-pink-100': isActive('/login') }"
-            class="px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 font-semibold shadow transition"
-          >
-            Login
           </RouterLink>
         </li>
       </ul>

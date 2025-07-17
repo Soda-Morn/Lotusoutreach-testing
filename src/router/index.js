@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/WhyGirlView.vue'
 import AboutView from '../views/AboutView.vue'
 import CambodiaView from '@/views/CambodiaView.vue'
-import NewsView from '@/views/NewsView.vue'
+import NewsView from '@/views/ActivityView.vue'
 import DonateView from '@/views/DonateView.vue'
 import ContactView from '@/views/ContactView.vue'
 import Education from '@/components/Education.vue'
@@ -29,8 +29,8 @@ const router = createRouter({
       component: CambodiaView,
     },
     {
-      path: '/news',
-      name: 'news',
+      path: '/activity',
+      name: 'activity',
       component: NewsView,
     },
     {
