@@ -2,7 +2,7 @@
   <div v-if="program" class="min-h-screen">
     <!-- Full-screen background header with overlay -->
     <div
-      class="relative h-screen bg-cover bg-center bg-no-repeat text-white"
+      class="relative h-screen bg-cover object-contain bg-no-repeat text-white"
       :style="{ backgroundImage: `url(${program.image})` }"
     >
       <div
