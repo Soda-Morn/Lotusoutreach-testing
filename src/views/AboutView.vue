@@ -324,7 +324,7 @@ const originalPartnerLogos = [
     info: 'CCC Cambodia',
   },
   {
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCljWYOPH-B53hWvcR5YnxvGZ0eENHAC_hfg&s',
+    img: 'https://i.imgur.com/3RCrIcD.png',
     url: 'https://www.whitelotustrust.org/',
     info: 'White Lotus Trust',
   },
