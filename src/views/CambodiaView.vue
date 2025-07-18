@@ -566,32 +566,8 @@ html {
   background: linear-gradient(to bottom, #f3f4f6, #ffffff);
 }
 
-/* Option 2: Soft Blue Gradient */
- /* .min-h-screen {
-  background: linear-gradient(to bottom, #e6f0fa, #ffffff);
-} */
-
-/* Option 3: Warm Beige Gradient */
- /* .min-h-screen {
-  background: linear-gradient(to bottom, #f5ece4, #ffffff);
-} */
-
-/* Option 4: Light Gray Pattern */
- /* .min-h-screen {
-  background: linear-gradient(to bottom, #f7f7f7, #e5e7eb);
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-} */
-
-/* Option 5: Minimal White with Overlay */
- /* .min-h-screen {
-  background: #ffffff;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 1px, transparent 1px);
-  background-size: 100% 10px;
-} */
-
 button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-1px);  
 }
 
 .group:hover .transition-transform {
