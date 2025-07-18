@@ -63,63 +63,61 @@
       </div>
     </section>
 
-    <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white">
-      <div
-        class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start"
-      >
-        <div class="relative mr-0 md:mr-8 mb-12 md:mb-0">
-          <div
-            class="w-[400px] h-[400px] rounded-full border-[12px] border-blue-500 overflow-hidden mx-auto"
-          >
-            <img
-              src="https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9475.jpg"
-              alt="Lotus Outreach profile image"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div
-            class="absolute -top-4 -left-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg text-center"
-          >
-            <p class="text-2xl font-bold">23</p>
-            <p class="text-sm">Years of</p>
-            <p class="text-sm">Experience</p>
-          </div>
-          <div
-            class="absolute -bottom-12 -left-4 bg-blue-700 text-white p-4 rounded-lg shadow-lg w-64 text-sm"
-          >
-            <p class="font-semibold mb-1">Together with our partners,</p>
-            <p>
-              we continue to provide education scholarships, skills training,
-              counseling, and safe environments for vulnerable communities
-              across Cambodia.
-            </p>
-          </div>
-        </div>
+  <section class="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+  <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
 
-        <div class="flex-1 text-center md:text-left">
-          <h1 class="text-4xl font-bold text-gray-800 mb-4">History</h1>
-          <h2 class="text-2xl font-semibold text-gray-600 mb-6">
-            | Donate For Girls Around The World!
-          </h2>
-          <p class="text-gray-700 mb-4">
-            Lotus Outreach’s work in Cambodia began with a powerful moment when
-            founder Khyentse Norbu met a young, partially blind girl at a safe
-            house. Touched by her strength, he pledged to support her
-            education—an experience that reshaped our mission.
-          </p>
-          <p class="text-gray-700">
-            Originally founded in 1993 in India to support refugees, LO expanded
-            globally, establishing its U.S. headquarters in 2002.
-          </p>
-          <p class="text-gray-700 mt-4">
-            <strong class="text-blue-600">Best Addition:</strong> Today, Lotus
-            Outreach Cambodia empowers women and girls through education, skills
-            training, and community programs—breaking the cycle of poverty and
-            creating lasting change.
-          </p>
-        </div>
+    <div class="relative flex-shrink-0 group">
+      <div class="relative w-72 sm:w-80 md:w-96 lg:w-[450px] h-72 sm:h-80 md:h-96 lg:h-[450px] rounded-full border-[8px] md:border-[12px] border-blue-500 overflow-hidden mx-auto shadow-2xl group-hover:scale-105 transition-transform duration-300 ease-in-out bg-gradient-to-br from-blue-100 to-blue-300">
+        <img
+          src="https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9475.jpg"
+          alt="Lotus Outreach profile image"
+          class="w-full h-full object-cover opacity-95"
+        />
+        <div class="absolute inset-0 rounded-full border-4 border-white opacity-30"></div>
       </div>
-    </section>
+
+      <div class="absolute -top-4 -left-4 bg-blue-600 text-white p-3 md:p-4 rounded-lg shadow-lg text-center">
+        <p class="text-xl md:text-2xl font-bold">23</p>
+        <p class="text-sm md:text-base">Years of</p>
+        <p class="text-sm md:text-base">Experience</p>
+      </div>
+
+      <div class="absolute -bottom-10 -left-4 bg-blue-700 text-white p-3 md:p-4 rounded-lg shadow-lg w-72 md:w-80 text-sm md:text-base">
+        <p class="font-semibold mb-1">Together with our partners,</p>
+        <p>
+          we continue to provide education scholarships, skills training,
+          counseling, and safe environments for vulnerable communities
+          across Cambodia.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">History</h1>
+      <h2 class="text-xl sm:text-2xl font-semibold text-gray-600 mb-6">
+        | Donate For Girls Around The World!
+      </h2>
+      <p class="text-gray-700 mb-4">
+        Lotus Outreach’s work in Cambodia began with a powerful moment when
+        founder Khyentse Norbu met a young, partially blind girl at a safe
+        house. Touched by her strength, he pledged to support her
+        education—an experience that reshaped our mission.
+      </p>
+      <p class="text-gray-700 mb-4">
+        Originally founded in 1993 in India to support refugees, LO expanded
+        globally, establishing its U.S. headquarters in 2002.
+      </p>
+      <p class="text-gray-700">
+        <strong class="text-blue-600">Best Addition:</strong> Today, Lotus
+        Outreach Cambodia empowers women and girls through education, skills
+        training, and community programs—breaking the cycle of poverty and
+        creating lasting change.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
     <section class="py-20" id="mission-vision-values">
       <div
