@@ -14,7 +14,7 @@
       >
         <button
           @click="goBack"
-          class="group inline-flex items-center gap-2 bg-white/20 px-5 py-2 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-8 w-fit"
+          class="group items-center gap-2 bg-white/20 px-5 py-2 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-8 ml-20 w-fit"
         >
           <ArrowLeftIcon
             class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300"
