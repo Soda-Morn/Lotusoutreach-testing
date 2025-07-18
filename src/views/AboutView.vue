@@ -105,7 +105,7 @@
             Lotus Outreach’s work in Cambodia began with a powerful moment when
             founder Khyentse Norbu met a young, partially blind girl at a safe
             house. Touched by her strength, he pledged to support her
-            education—an experience that reshaped our mission.
+            education-an experience that reshaped our mission.
           </p>
           <p class="text-gray-700">
             Originally founded in 1993 in India to support refugees, LO expanded
@@ -114,7 +114,7 @@
           <p class="text-gray-700 mt-4">
             <strong class="text-blue-600">Best Addition:</strong> Today, Lotus
             Outreach Cambodia empowers women and girls through education, skills
-            training, and community programs—breaking the cycle of poverty and
+            training, and community programs-breaking the cycle of poverty and
             creating lasting change.
           </p>
         </div>
@@ -137,7 +137,7 @@
             </div>
             <p class="text-gray-700 leading-relaxed">
               To empower vulnerable women and children in Cambodia through
-              education, training, and care—helping them break the cycle of
+              education, training, and care-helping them break the cycle of
               poverty and live with dignity, opportunity, and hope.
             </p>
           </div>
@@ -162,7 +162,7 @@
             <p class="text-gray-700 leading-relaxed">
               We believe in dignity, equity, and opportunity for all. With
               compassion, integrity, and resilience, we uplift the vulnerable
-              and build brighter futures—one life at a time.
+              and build brighter futures-one life at a time.
             </p>
           </div>
         </div>

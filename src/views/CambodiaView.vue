@@ -82,23 +82,24 @@
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div v-for="(program, index) in communityPrograms" :key="index"
-              class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
-              <div class="h-48 overflow-hidden relative">
+              class="group relative bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
+              <div class="w-full h-72">
                 <img :src="program.image" :alt="program.title"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute top-3 left-3">
-                  <div class="w-8 h-8 rounded-full bg-pink-600 flex items-center justify-center">
-                    <i :class="program.icon" class="text-sm text-white"></i>
-                  </div>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent"></div>
               </div>
-              <div class="p-5">
-                <h3 class="text-lg font-poppins font-medium text-gray-900 mb-2">{{ program.title }}</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-3">{{ program.description }}</p>
+
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <div class="absolute top-[-4.5rem] left-6">
+                  <!-- <div class="w-16 h-16 rounded-full bg-pink-600 flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                    <i :class="program.icon" class="text-2xl text-white"></i>
+                  </div> -->
+                </div>
+                <h3 class="text-2xl font-poppins font-semibold mb-2 mt-4 leading-tight">{{ program.title }}</h3>
+                <p class="text-gray-200 text-base leading-relaxed mb-4 w-85">{{ program.description }}</p>
                 <button @click="showProgramDetail(program, 'community')"
-                  class="text-pink-600 font-medium hover:text-pink-700 transition-colors duration-200 text-sm">
-                  Learn More <i class="fas fa-arrow-right ml-1"></i>
+                  class="inline-flex items-center text-pink-400 font-medium rounded hover:text-pink-300 transition-colors duration-200 text-base">
+                  Learn More <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
                 </button>
               </div>
             </div>
@@ -329,7 +330,7 @@ export default {
           title: 'GATE',
           image: 'https://lotusoutreach.org/wp-content/uploads/2020/02/Alumni-Gathering-Group-Photo-2.jpg',
           icon: 'fas fa-book-open',
-          description: 'Providing education scholarships and rice support for at-risk girls and their families living in dire poverty.',
+          description: 'Providing education scholarships and rice support for at-risk girls and their families living in dire poverty and have basic food security.',
           fullDescription: 'The GATE (Girls Access to Education) program provides comprehensive support to at-risk girls from families living in extreme poverty. Understanding that hunger and financial hardship are major barriers to education, GATE combines educational scholarships with essential rice support for families. This holistic approach ensures that girls can focus on their studies while their families have basic food security.',
           features: [
             'Full educational scholarships covering tuition and supplies',
