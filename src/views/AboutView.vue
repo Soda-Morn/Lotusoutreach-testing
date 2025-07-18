@@ -370,9 +370,9 @@ const originalPartnerLogos = [
     info: "CCC Cambodia",
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCljWYOPH-B53hWvcR5YnxvGZ0eENHAC_hfg&s",
-    url: "https://www.whitelotustrust.org/",
-    info: "White Lotus Trust",
+    img: 'https://i.imgur.com/3RCrIcD.png',
+    url: 'https://www.whitelotustrust.org/',
+    info: 'White Lotus Trust',
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtqDNr8W1xVsYI1MO7mo-uIZjb6bQKKUHNJA&s",
