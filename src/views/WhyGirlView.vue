@@ -206,12 +206,12 @@
                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
               ></div>
               <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <h3 class="text-3xl font-bold mb-2 text-blue-400">
+                <h3 class="text-2xl font-bold mb-3 text-white">
                   Building Stronger Communities
                 </h3>
-                <p class="text-lg font-semibold mb-3">
+                <!-- <p class="text-lg font-semibold mb-3">
                   Across Cambodia's rural provinces
-                </p>
+                </p> -->
                 <p class="text-gray-200 leading-relaxed">
                   Our comprehensive programs address the unique challenges
                   facing Cambodian families in Siem Reap, Battambang, and other
